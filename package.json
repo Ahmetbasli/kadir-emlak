@@ -1,0 +1,17 @@
+{
+  "name": "kadir-emlak",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/cms",
+    "apps/web"
+  ],
+  "description": "Workspaces: - apps/cms (Strapi v5) - apps/web (Next.js)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
