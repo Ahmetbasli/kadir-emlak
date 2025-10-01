@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_shared_seo",
+  "info": {
+    "displayName": "SEO",
+    "description": "Search Engine Optimization fields"
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string",
+      "required": false,
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "metaDescription": {
+      "type": "text",
+      "required": false,
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "canonicalURL": {
+      "type": "string",
+      "required": false
+    },
+    "ogTitle": {
+      "type": "string",
+      "required": false,
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "ogDescription": {
+      "type": "text",
+      "required": false,
+      "pluginOptions": { "i18n": { "localized": true } }
+    },
+    "ogImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false
+    }
+  }
+}
+
