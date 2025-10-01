@@ -6,19 +6,38 @@
     "pluralName": "agents",
     "displayName": "Agent"
   },
-  "options": { "draftAndPublish": true },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
   "attributes": {
-    "name": { "type": "string", "required": true },
-    "phone": { "type": "string" },
-    "email": { "type": "email" },
-    "avatar": { "type": "media", "multiple": false },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false
+    },
     "properties": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::property.property",
       "mappedBy": "agent"
     },
-    "seo": { "type": "component", "repeatable": false, "component": "shared.seo" }
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "test": {
+      "type": "string"
+    }
   }
 }
-

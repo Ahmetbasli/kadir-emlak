@@ -457,6 +457,7 @@ export interface ApiAgentAgent extends Struct.CollectionTypeSchema {
     >;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false>;
+    test: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -595,6 +596,10 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
         };
       }>;
     images: Schema.Attribute.Media<undefined, true>;
+    listingStatus: Schema.Attribute.Enumeration<
+      ['for-sale', 'for-rent', 'sold']
+    > &
+      Schema.Attribute.DefaultTo<'for-sale'>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -611,8 +616,6 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    status: Schema.Attribute.Enumeration<['for-sale', 'for-rent', 'sold']> &
-      Schema.Attribute.DefaultTo<'for-sale'>;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
